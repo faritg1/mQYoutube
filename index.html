@@ -9,27 +9,25 @@
 </head>
 <body>
     <!-- Navbar -->
-    <header>
-        <nav class="containerNav d-flex">
-            <div class="nav-left d-flex">
-                <img id="menu" class="menu-icon" src="./img/menu.png" alt="1">
-                <img class="logo-icon" src="./img/logo.png" alt="2">
+    <nav class="containerNav d-flex">
+        <div class="nav-left d-flex">
+            <img id="menu" class="menu-icon" src="./img/menu.png" alt="1">
+            <img class="logo-icon" src="./img/logo.png" alt="2">
+        </div>
+        <div class="nav-middle d-flex">
+            <div class="search-box d-flex">
+                <input type="text" placeholder="Search">
+                <img src="./img/search.png" alt="">
             </div>
-            <div class="nav-middle d-flex">
-                <div class="search-box d-flex">
-                    <input type="text" placeholder="Search">
-                    <img src="./img/search.png" alt="">
-                </div>
-                <img class="mic-icon" src="./img/voice-search.png" alt="">
-            </div>
-            <div class="nav-right d-flex">
-                <img src="./img/upload.png" alt="3">
-                <img src="./img/more.png" alt="4">
-                <img src="./img/notification.png" alt="5">
-                <img class="user-icon" src="./img/Jack.png" alt="6">
-            </div>
-        </nav>
-    </header>
+            <img class="mic-icon" src="./img/voice-search.png" alt="">
+        </div>
+        <div class="nav-right d-flex">
+            <img src="./img/upload.png" alt="3">
+            <img src="./img/more.png" alt="4">
+            <img src="./img/notification.png" alt="5">
+            <img class="user-icon" src="./img/Jack.png" alt="6">
+        </div>
+    </nav>
     <!-- Sidebar "Barra Lateral" -->
     <div id="sidebar" class="sidebar">
         <div class="shortcut-links">
@@ -59,11 +57,13 @@
         </div>
         <div class="list-container">
             <div class="vid-list">
-                <img class="thumbnail" src="./img/thumbnail1.png" alt="">
+                <a href="./video/video.html">
+                    <img class="thumbnail" src="./img/thumbnail1.png" alt="">
+                </a>
                 <div class="d-flex">
                     <img src="./img/Jack.png" alt="">
                     <div class="vid-info">
-                        <a href="#">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Non, velit!</a>
+                        <a href="./video/video.html">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Non, velit!</a>
                         <p>Lorem, ipsum.</p>
                         <p>15k Views &bull; 2 days</p>
                     </div>

@@ -204,3 +204,61 @@ a{
 .large-container{
     padding-left: 7%;
 }
+
+/* Media query "RESPONSIVE" */
+@media(max-width:900px){
+    .menu-icon{
+        display: none;
+    }
+    .sidebar{
+        display: none;
+    }
+    .container, .large-container{
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+
+    .nav-right img{
+        display: none;
+    }
+
+    .nav-right .user-icon{
+        display: block;
+        width: 30px;
+    }
+
+    .nav-middle .search-box input{
+        width: 100px;
+    }
+
+    .nav-middle .mic-icon{
+        display: none;
+    }
+
+    .logo-icon{
+        widows: 90px;
+    }
+}
+
+/* Redireccionamiento Play Video Page */
+.play-container{
+    padding-left: 2%;
+}
+
+.row{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.play-video{
+    flex-basis: 69%;
+}
+
+.right-sidebar{
+    flex-basis: 30%;
+}
+
+.play-video video{
+    width: 100%;
+}
