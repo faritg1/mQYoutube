@@ -262,3 +262,52 @@ a{
 .play-video video{
     width: 100%;
 }
+
+.side-video-list{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
+}
+
+.side-video-list img{
+    width: 100%;
+}
+
+.side-video-list .small-thumbnail{
+    flex-basis: 49%;
+}
+
+.side-video-list .vid-info{
+    flex-basis: 49%;
+}
+
+.play-video .tags a{
+    color: #0000ff;
+    font-size: 13px;
+}
+
+.play-video h3{
+    font-weight: 600;
+    font-size: 22px;
+}
+
+.play-video .play-video-info{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 10px;
+    font-size: 14px;
+    color: #5a5a5a;
+}
+
+.play-video .play-video-info a img{
+    width: 20px;
+    margin-right: 8px;
+}
+
+.play-video .play-video-info a{
+    display: inline-flex;
+    align-items: center;
+    margin-left: 15px;
+}
