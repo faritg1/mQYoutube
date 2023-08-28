@@ -1,3 +1,4 @@
+import { searchAll } from "./get";
 let menuIcon = document.querySelector("#menu");
 let sidebar = document.querySelector("#sidebar");
 let container = document.querySelector("#container");
@@ -45,10 +46,15 @@ let fnVideo = async(url, options) => {
     let video = document.querySelector("#vid-list");
     video.innerHTML = null;
     video.insertAdjacentHTML("beforeend", /* html */ `
-        <img class="thumbnail" src=" ${res.contents[0].video.movingThumbnails[0].url} " alt="">
-    `)
-}
+        <img class="thumbnail" src=" ${res.contents[0].video.movingThumbnails[0].url} " alt=""> 
+    `)}
 fnVideo(video,options);
+
+/* ------------------- IMPORT SearchAll ---------------------- */
+document.querySelector("#charSearch").addEventListener("change", (e) =>{
+    searchAll(e.target.value);
+})
+
 
 
 
