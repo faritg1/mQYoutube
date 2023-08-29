@@ -1,4 +1,5 @@
 import { searchAll } from "./get.js";
+import { fnVidList } from "./vidList.js";
 let menuIcon = document.querySelector("#menu");
 let sidebar = document.querySelector("#sidebar");
 let container = document.querySelector("#container");
@@ -12,10 +13,8 @@ menuIcon.onclick = () => {
 /* COMENZANDO API  UC8fkwsjcI_MhralEX1g4OBw @creativecode787 */
 
 /* ------------------- IMPORT SearchAll ---------------------- */
-document.querySelector("#charSearch").addEventListener("change", (e) =>{
+/* document.querySelector("#charSearch").addEventListener("change", (e) =>{
     searchAll(e.target.value);
-})
+}) */
 
-
-
-
+fnVidList();
