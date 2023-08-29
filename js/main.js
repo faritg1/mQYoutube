@@ -17,4 +17,5 @@ menuIcon.onclick = () => {
     searchAll(e.target.value);
 }) */
 
+// Videos principales 
 fnVidList();

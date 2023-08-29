@@ -11,7 +11,7 @@ export const fnVidList = async() =>{
         return(/* html */`
             <div class="vid-list">
                 <a href="./video/video.html"><img class="thumbnail" src="${value.video.thumbnails[3].url}" alt=""></a>
-                <div id="profile" class="d-flex">
+                <div class="d-flex">
                 <img src="${res.avatar[0].url}" alt="">
                     <div class="vid-info">
                         <a href="./video/video.html">${value.video.title}</a>
