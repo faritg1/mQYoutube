@@ -1,4 +1,4 @@
-export const rightSidebar = async() => {
+export const rightSidebar = async(id) => {
     const peticion = await fetch("../json/channelVideos.json");
     const json = await peticion.json();
 
@@ -19,5 +19,10 @@ export const rightSidebar = async() => {
         `)
     }).join("")
     }
+    `)
+
+    let iframe = document.querySelector("#playVideo");
+    iframe.insertAdjacentHTML("afterbegin", /* html */`
+    <iframe  height="700" src="https://www.youtube.com/embed/${id}?si=RCQzQ3pyGAY5LxN1&autoplay=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe> 
     `)
 }

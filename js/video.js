@@ -1,3 +1,5 @@
 import { rightSidebar } from "./rightSidebarPv.js";
 
-rightSidebar();
+let storage = localStorage.getItem("ID");
+console.log(storage);
+rightSidebar(storage);
