@@ -4,11 +4,11 @@ export const fnVidList = async() =>{
 
     const p = await fetch("../json/channelDetails.json");
     const res = await p.json();
-
+    json.contents.sort(()=> Math.random()-0.5); // funcion para desorganizar la informacion
     let listContainer = document.querySelector("#list-container")
     listContainer.insertAdjacentHTML("beforeend", /* html */`
     ${json.contents.map((value)=> {
-        return(/* html */`
+            return(/* html */`
             <div class="vid-list">
                 <a href="./video/video.html"><img class="thumbnail" src="${value.video.thumbnails[3].url}" alt=""></a>
                 <div class="d-flex">
@@ -24,5 +24,4 @@ export const fnVidList = async() =>{
         }).join("")
     }
     `)
-    console.log(json);
 }
