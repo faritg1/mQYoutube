@@ -1,5 +1,5 @@
-import { rightSidebar } from "./rightSidebarPv.js";
+import { rightSidebar } from "./sidebarPlayVideo.js";
 
-let storage = localStorage.getItem("ID");
-console.log(storage);
-rightSidebar(storage);
+let storageId = localStorage.getItem("ID");
+let storageDate = localStorage.getItem("DATE");
+rightSidebar(storageId,storageDate);

@@ -9,14 +9,14 @@ export const fnVidList = async() =>{
     listContainer.insertAdjacentHTML("beforeend", /* html */`
     ${json.contents.map((value)=> {
             return(/* html */`
-            <div class="vid-list" videoId=${value.video.videoId}>
+            <div class="vid-list" videoId=${value.video.videoId} vidDate=${value.video.publishedTimeText}>
                 <a href="./video/video.html"><img class="thumbnail" src="${value.video.thumbnails[3].url}" alt=""></a>
                 <div class="d-flex">
                 <img src="${res.avatar[0].url}" alt="">
                     <div class="vid-info">
                         <a href="./video/video.html">${value.video.title}</a>
                         <p>${res.title}</p>
-                        <p>${value.video.stats.views} Views &bull; ${value.video.publishedTimeText}</p>
+                        <p>${value.video.stats.views} Views &bull;  ${value.video.publishedTimeText}</p>
                     </div>
                 </div>
             </div>
@@ -29,7 +29,9 @@ export const fnVidList = async() =>{
     vidList.forEach(vid => {
         vid.addEventListener("click", () => {
             let vidList = vid.getAttribute("videoId")
+            let date = vid.getAttribute("vidDate")
             localStorage.setItem("ID",vidList)
+            localStorage.setItem("DATE",date)
         })
     })
 }
