@@ -24,4 +24,5 @@ export const fnVidList = async() =>{
         }).join("")
     }
     `)
+    console.log(json);
 }

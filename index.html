@@ -10,25 +10,24 @@
 <body>
     <!-- Navbar -->
     <nav class="containerNav d-flex">
-        <div class="nav-left d-flex">
+        <div class="nav-left d-flex" >
             <img id="menu" class="menu-icon" src="./img/menu.png" alt="1">
-            <img class="logo-icon" src="./img/logo.png" alt="2">
+            <img class="logo-icon" src="./img/YouTube_Logo_2017.svg" alt="2">
         </div>
-        <div class="nav-middle d-flex">
+        <div class="nav-middle d-flex" style="display: flex; flex-direction: column;">
             <div class="search-box d-flex">
-                <input type="text" placeholder="Search">
+                <input id="chartSearch" type="text" placeholder="Search">
                 <img src="./img/search.png" alt="">
+                <img class="mic-icon" src="./img/voice-search.png" alt="">
             </div>
-            <img class="mic-icon" src="./img/voice-search.png" alt="">
+            <div style="flex-direction: column; width: 100%; overflow: visible;">
+                <div id="active" style="margin-top: 5px; width: 440px; padding-left: 30px; padding-top: 10px; position: absolute; z-index: 5; background: #ccc; border-radius: 5px; overflow-y: auto; visibility: hidden;">
+                    <ul id="searchAll" style="font-family: Arial, Helvetica, sans-serif; font-size: 17px;">
+                    </ul>
+                </div>
+            </div>
         </div>
         <!-- SEARCHALL PRUEBA -->
-        <div>
-            <div id="active">
-                <ul id="searchAll">
-                    <li>sdsadasd</li>
-                </ul>
-            </div>
-        </div>
         <div class="nav-right d-flex">
             <img src="./img/upload.png" alt="3">
             <img src="./img/more.png" alt="4">
@@ -60,8 +59,17 @@
     </div>
     <!-- Main -->
     <div id="container" class="container">
-        <div class="banner">
-            <img src="./img/banner.png" alt="">
+        <div id="banner" class="banner">
+            <button type="button">Todos</button>
+            <button type="button">Mixes</button>
+            <button type="button">Música</button>
+            <button type="button">VideoJuegos</button>
+            <button type="button">En tiempo real</button>
+            <button type="button">Banda sonora</button>
+            <button type="button">HTML CSS && JS</button>
+            <button type="button">Pop latino</button>
+            <button type="button">Animación</button>
+            <button type="button">Mixes</button>
         </div>
         <div id="list-container" class="list-container">
             
