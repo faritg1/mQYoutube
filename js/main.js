@@ -1,5 +1,6 @@
-//import { searchAll } from "./search.js";
 import { fnVidList } from "./vidList.js";
+import { searchAll } from "./search.js";
+import { fnIframe } from "./sidebarPlayVideo.js";
 let menuIcon = document.querySelector("#menu");
 let sidebar = document.querySelector("#sidebar");
 let container = document.querySelector("#container");
@@ -12,13 +13,15 @@ menuIcon.onclick = () => {
 
 /* COMENZANDO API  UC8fkwsjcI_MhralEX1g4OBw @creativecode787 */
 
-/* ------------------- IMPORT SearchAll ---------------------- */
+/* ------------------- IMPORT SearchAll barra de busqueda ---------------------- */
 /* document.querySelector("#chartSearch").addEventListener("change", (e) =>{
     searchAll(e.target.value);
 }) */
 
 // Videos principales 
 fnVidList();
+searchAll();
 
-//Barra Buscar
-//searchAll();
+let storageId = localStorage.getItem("ID");
+fnIframe(storageId);
+

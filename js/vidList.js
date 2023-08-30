@@ -9,7 +9,7 @@ export const fnVidList = async() =>{
     listContainer.insertAdjacentHTML("beforeend", /* html */`
     ${json.contents.map((value)=> {
             return(/* html */`
-            <div class="vid-list" videoId=${value.video.videoId}>
+            <div date=${value.video.publishedTimeText} class="vid-list" videoId=${value.video.videoId}>
                 <a href="../video/video.html"><img class="thumbnail" src="${value.video.thumbnails[3].url}" alt=""></a>
                 <div class="d-flex">
                 <img src="${res.avatar[0].url}" alt="">
@@ -30,6 +30,8 @@ export const fnVidList = async() =>{
         vid.addEventListener("click", () => {
             let vidList = vid.getAttribute("videoId")
             localStorage.setItem("ID",vidList)
+            /* let date = vid.getAttribute("date")
+            localStorage.setItem("DATE", date) */
         })
     })
 }

@@ -31,7 +31,7 @@ export const rightSidebar = async() => {
     })
 }
 
-export const fnIframe = async(id) => {
+export const fnIframe = async(id,date) => {
     const videoPeticion = await fetch("../json/videoDetails.json");
     const jsonVideo = await videoPeticion.json();
 
@@ -41,7 +41,7 @@ export const fnIframe = async(id) => {
         <iframe height="700" src="https://www.youtube.com/embed/${id}?si=RCQzQ3pyGAY5LxN1&autoplay=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
         <h3>${jsonVideo.title}</h3>
         <div class="play-video-info">
-            <p>${jsonVideo.stats.views} Veiws &bull; ${jsonVideo.publishedDate}</p>
+            <p>${jsonVideo.stats.views} Veiws &bull; ${jsonVideo.publishedDate} ${jsonVideo.superTitle.items}</p>
             <div>
                 <a href="#"><img src="../img/like.png" alt="">${jsonVideo.stats.likes}</a>
                 <a href="#"><img src="../img/dislike.png" alt=""></a>
@@ -59,8 +59,7 @@ export const fnIframe = async(id) => {
             <button type="button">Subscribe</button>
         </div>
         <div class="vid-description">
-            <p>Channel that makes learning easy</p>
-            <p>Subscribe Easy Tutorials to watch more tutorials on wev Development</p>
+        <p>${jsonVideo.description}</p>
             <hr>
             <h4>100 Comments</h4>
             <div class="add-comment">
