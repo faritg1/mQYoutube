@@ -1,6 +1,6 @@
-import { fnVidList } from "/js/vidList.js";
-import { searchAll } from "/js/search.js";
-import { fnIframe } from "/js/sidebarPlayVideo.js";
+import { fnVidList } from "./vidList.js";
+import { searchAll } from "./search.js";
+import { fnIframe } from "./search.js";
 let menuIcon = document.querySelector("#menu");
 let sidebar = document.querySelector("#sidebar");
 let container = document.querySelector("#container");
