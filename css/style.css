@@ -1,7 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 *{
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    font-family: 'Roboto', sans-serif;
 }
 
 /* Clase general */
@@ -52,6 +54,7 @@ a{
     background: #ccc; 
     border-radius: 5px; 
     overflow-y: auto;
+    /* visibility: hidden; */
 }
 
 .containerSearch .subSearch ul{
@@ -65,8 +68,10 @@ a{
 
 .nav-right .user-icon{
     width: 35px;
+    height: 35px;
     border-radius: 50%;
     margin-right: 0;
+    object-fit: cover;
 }
 
 .nav-left .menu-icon{
@@ -413,77 +418,14 @@ a{
     color: #5a5a5a;
 }
 
-.vid-description h4{
-    font-size: 14px;
-    color: #5a5a5a;
-    margin-top: 15px;
-}
-
-.add-comment{
-    display: flex;
-    align-items: center;
-    margin: 30px 0;
-}
-
-.add-comment img{
-    width: 35px;
-    border-radius: 50%;
-    margin-right: 15px;
-}
-
-.add-comment input{
-    border: 0;
-    outline: 0;
-    border-bottom: 1px solid #ccc;
-    width: 100%;
-    padding-top: 10px;
-    background: transparent;
-}
-
-.old-comment{
-    display: flex;
-    align-items: center;
-    margin: 20px 0;
-}
-
-.old-comment img{
-    width: 35px;
-    border-radius: 50%;
-    margin-right: 15px;
-}
-
-.old-comment h3{
-    font-size: 14px;
-    margin-bottom: 2px;
-}
-
-.old-comment h3 span{
-    font-size: 12px; 
-    color: #5a5a5a;
-    font-weight: 500;
-    margin-left: 8px;
-}
-
-.old-comment .acomment-action{
-    display: flex;
-    align-items: center;
-    margin: 8px 0;
-    font-size: 14px;
-}
-
-.old-comment .acomment-action img{
-    border-radius: 0;
-    width: 20px;
-    margin-right: 5px;
-}
-
-.old-comment .acomment-action span{
-    margin-right: 20px;
-    color: #5a5a5a;
-}
-
-.old-comment .acomment-action a{
+.vid-description .notComments p a{
     color: #0000ff;
+}
+
+.notComments{
+    height: 100px;
+    display: grid;
+    place-items: center;
 }
 
 @media(max-width:900px){

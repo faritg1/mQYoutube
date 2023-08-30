@@ -1,8 +1,8 @@
 export const fnVidList = async() =>{
-    const peticion = await fetch("../json/channelVideos.json");
+    const peticion = await fetch("/json/channelVideos.json");
     const json = await peticion.json();
 
-    const p = await fetch("../json/channelDetails.json");
+    const p = await fetch("/json/channelDetails.json");
     const res = await p.json();
     json.contents.sort(()=> Math.random()-0.5); // funcion para desorganizar la informacion
     let listContainer = document.querySelector("#list-container")

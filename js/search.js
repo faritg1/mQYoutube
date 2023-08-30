@@ -1,7 +1,7 @@
 /* FALTA API */
 
 export const searchAll = async() =>{
-    const peticion = await fetch("../json/channelSearch.json")
+    const peticion = await fetch("/json/channelSearch.json");
     const json = await peticion.json();
     let h=0, cont=0
     let array = json.contents.map((value, id)=>{

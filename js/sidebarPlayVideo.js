@@ -1,5 +1,5 @@
 export const rightSidebar = async() => {
-    const peticion = await fetch("../json/channelVideos.json");
+    const peticion = await fetch("/json/channelVideos.json");
     const json = await peticion.json();
 
     /* Agregando contenido en la barra lateral */
@@ -32,7 +32,7 @@ export const rightSidebar = async() => {
 }
 
 export const fnIframe = async(id,date) => {
-    const videoPeticion = await fetch("../json/videoDetails.json");
+    const videoPeticion = await fetch("/json/videoDetails.json");
     const jsonVideo = await videoPeticion.json();
 
     /* Redireccionamiento video e informacion */
@@ -59,42 +59,10 @@ export const fnIframe = async(id,date) => {
             <button type="button">Subscribe</button>
         </div>
         <div class="vid-description">
-        <p>${jsonVideo.description}</p>
+            <p>${jsonVideo.description}</p>
             <hr>
-            <h4>100 Comments</h4>
-            <div class="add-comment">
-                <img src="../img/Jack.png" alt="">
-                <input type="text" placeholder="Write comments...">
-            </div>
-            <div class="old-comment">
-                <img src="../img/Jack.png" alt="">
-                <div>
-                    <h3>Jack <span>2 days ago</span></h3>
-                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Soluta exercitationem odio aspernatur totam. Id repellat quibusdam quia, minus in sed.</p>
-                    <div class="acomment-action">
-                        <img src="../img/like.png" alt="">
-                        <span>244</span>
-                        <img src="../img/dislike.png" alt="">
-                        <span>2</span>
-                        <span>Reply</span>
-                        <a href="#">All Replies</a>
-                    </div>
-                </div>
-            </div>
-            <div class="old-comment">
-                <img src="../img/Jack.png" alt="">
-                <div>
-                    <h3>Jack <span>2 days ago</span></h3>
-                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Soluta exercitationem odio aspernatur totam. Id repellat quibusdam quia, minus in sed.</p>
-                    <div class="acomment-action">
-                        <img src="../img/like.png" alt="">
-                        <span>244</span>
-                        <img src="../img/dislike.png" alt="">
-                        <span>2</span>
-                        <span>Reply</span>
-                        <a href="#">All Replies</a>
-                    </div>
-                </div>
+            <div class="notComments">
+                <p>Los comentarios están desactivados.<a href="#    "> Más información</a></p>
             </div>
         </div>
     `)
