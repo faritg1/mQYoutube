@@ -28,8 +28,8 @@ const options = {
 }) */
 
 // Videos principales 
-fnVidList();
-searchAll();
+fnVidList(options);
+searchAll(options);
 
 let storageId = localStorage.getItem("ID");
 fnIframe(storageId);

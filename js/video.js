@@ -11,7 +11,7 @@ const options = {
 	}
 };
 
-searchAll();
+searchAll(options);
 let storageId = localStorage.getItem("ID");
-rightSidebar();
-fnIframe(storageId);
+rightSidebar(options);
+fnIframe(storageId,options);

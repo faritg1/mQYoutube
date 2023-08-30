@@ -1,4 +1,4 @@
-export const fnVidList = async() =>{
+export const fnVidList = async(options) =>{
     //const peticion = await fetch("https://youtube138.p.rapidapi.com/channel/videos/?id=UC8fkwsjcI_MhralEX1g4OBw&hl=en&gl=US", options)
     const peticion = await fetch("/json/channelVideos.json");
     const json = await peticion.json();
