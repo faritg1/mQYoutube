@@ -1,5 +1,5 @@
 export const rightSidebar = async() => {
-    //const peticion = await fetch("https://youtube138.p.rapidapi.com/channel/videos/?id=UC8fkwsjcI_MhralEX1g4OBw&hl=en&gl=US")
+    //const peticion = await fetch("https://youtube138.p.rapidapi.com/channel/videos/?id=UC8fkwsjcI_MhralEX1g4OBw&hl=en&gl=US", options)
     const peticion = await fetch("/json/channelVideos.json");
     const json = await peticion.json();
 
@@ -33,7 +33,7 @@ export const rightSidebar = async() => {
 }
 
 export const fnIframe = async(id,date) => {
-    //const videoPeticion = await fetch("https://youtube138.p.rapidapi.com/video/details/?id=kJQP7kiw5Fk&hl=en&gl=US");
+    //const videoPeticion = await fetch("https://youtube138.p.rapidapi.com/video/details/?id=kJQP7kiw5Fk&hl=en&gl=US", options);
     const videoPeticion = await fetch("/json/videoDetails.json");
     const jsonVideo = await videoPeticion.json();
 

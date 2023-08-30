@@ -1,9 +1,9 @@
 export const fnVidList = async() =>{
-    //const peticion = await fetch("https://youtube138.p.rapidapi.com/channel/videos/?id=UC8fkwsjcI_MhralEX1g4OBw&hl=en&gl=US")
+    //const peticion = await fetch("https://youtube138.p.rapidapi.com/channel/videos/?id=UC8fkwsjcI_MhralEX1g4OBw&hl=en&gl=US", options)
     const peticion = await fetch("/json/channelVideos.json");
     const json = await peticion.json();
 
-    // const p = await fetch("https://youtube138.p.rapidapi.com/channel/details/?id=UC8fkwsjcI_MhralEX1g4OBw&hl=en&gl=US")
+    // const p = await fetch("https://youtube138.p.rapidapi.com/channel/details/?id=UC8fkwsjcI_MhralEX1g4OBw&hl=en&gl=US", options)
     const p = await fetch("/json/channelDetails.json");
     const res = await p.json();
     json.contents.sort(()=> Math.random()-0.5); // funcion para desorganizar la informacion

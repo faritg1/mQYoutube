@@ -1,7 +1,7 @@
 /* FALTA API */
 
 export const searchAll = async() =>{
-    //const peticion = await fetch("https://youtube138.p.rapidapi.com/channel/search/?id=UC8fkwsjcI_MhralEX1g4OBw&q=john%20cena&hl=en&gl=US");
+    //const peticion = await fetch("https://youtube138.p.rapidapi.com/channel/search/?id=UC8fkwsjcI_MhralEX1g4OBw&q=john%20cena&hl=en&gl=US", options);
     const peticion = await fetch("/json/channelSearch.json");
     const json = await peticion.json();
     let h=0, cont=0

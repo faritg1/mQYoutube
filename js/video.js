@@ -13,6 +13,5 @@ const options = {
 
 searchAll();
 let storageId = localStorage.getItem("ID");
-//let storageDate = localStorage.getItem("DATE");
 rightSidebar();
 fnIframe(storageId);
