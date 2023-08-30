@@ -1,6 +1,6 @@
 export const rightSidebar = async(options) => {
-    //const peticion = await fetch("https://youtube138.p.rapidapi.com/channel/videos/?id=UC8fkwsjcI_MhralEX1g4OBw&hl=en&gl=US", options)
-    const peticion = await fetch("/json/channelVideos.json");
+    const peticion = await fetch("https://youtube138.p.rapidapi.com/channel/videos/?id=UC8fkwsjcI_MhralEX1g4OBw&hl=en&gl=US", options)
+    //const peticion = await fetch("/json/channelVideos.json");
     const json = await peticion.json();
 
     /* Agregando contenido en la barra lateral */
@@ -32,15 +32,21 @@ export const rightSidebar = async(options) => {
     })
 }
 
-export const fnIframe = async(id,options) => {
-    //const videoPeticion = await fetch("https://youtube138.p.rapidapi.com/video/details/?id=kJQP7kiw5Fk&hl=en&gl=US", options);
-    const videoPeticion = await fetch("/json/videoDetails.json");
-    const jsonVideo = await videoPeticion.json();
-
+export const fnIframe = async(id) => {
     /* Redireccionamiento video e informacion */
     let iframe = document.querySelector("#playVideo");
-    iframe.insertAdjacentHTML("beforeend", /* html */`
+    iframe.insertAdjacentHTML("afterbegin", /* html */`
         <iframe height="700" src="https://www.youtube.com/embed/${id}?si=RCQzQ3pyGAY5LxN1&autoplay=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    `)
+}
+
+export const fnContIframe = async(id,options) => {
+    const videoPeticion = await fetch(`https://youtube138.p.rapidapi.com/video/details/?id=${id}=en&gl=US`, options);
+    //const videoPeticion = await fetch("/json/videoDetails.json");
+    const jsonVideo = await videoPeticion.json();
+    console.log(videoPeticion);
+    let contenidoIframe = document.querySelector("#contVideo");
+    contenidoIframe.insertAdjacentHTML("afterbegin", /* html */`
         <h3>${jsonVideo.title}</h3>
         <div class="play-video-info">
             <p>${jsonVideo.stats.views} Veiws &bull; ${jsonVideo.publishedDate} ${jsonVideo.superTitle.items}</p>
@@ -64,7 +70,7 @@ export const fnIframe = async(id,options) => {
             <p>${jsonVideo.description}</p>
             <hr>
             <div class="notComments">
-                <p>Los comentarios están desactivados.<a href="#    "> Más información</a></p>
+                <p>Los comentarios están desactivados.<a href="#"> Más información</a></p>
             </div>
         </div>
     `)
