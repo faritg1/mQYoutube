@@ -31,6 +31,33 @@ a{
     z-index: 10;
 }
 
+.nav-middle{
+    display: flex;
+    flex-direction: column;
+}
+
+.containerSearch{
+    flex-direction: column; 
+    width: 100%; 
+    overflow: visible;
+}
+
+.subSearch{
+    margin-top: 5px; 
+    height: 500px; 
+    width: 440px; 
+    padding-left: 30px; 
+    padding-top: 10px; position: absolute; 
+    z-index: 5; 
+    background: #ccc; 
+    border-radius: 5px; 
+    overflow-y: auto;
+}
+
+.containerSearch .subSearch ul{
+    font-family: Arial, Helvetica, sans-serif; font-size: 17px;
+}
+
 .nav-right img{
     width: 25px; 
     margin-right: 25px;
