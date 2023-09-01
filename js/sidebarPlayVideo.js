@@ -1,6 +1,6 @@
 export const rightSidebar = async(options) => {
     const peticion = await fetch("https://youtube138.p.rapidapi.com/channel/videos/?id=UC8fkwsjcI_MhralEX1g4OBw&hl=en&gl=US", options)
-    //const peticion = await fetch("/json/channelVideos.json");
+    //const peticion = await fetch("/mQYoutube/json/channelVideos.json");
     const json = await peticion.json();
 
     /* Agregando contenido en la barra lateral */
@@ -10,10 +10,10 @@ export const rightSidebar = async(options) => {
     ${json.contents.map((value)=>{
         return(/* html */`
             <div class="side-video-list" idSd=${value.video.videoId}>
-                <a class="small-thumbnail" href="../video/video.html"><img src="${value.video.thumbnails[3].url}" alt="">
+                <a class="small-thumbnail" href="/mQYoutube/video/video.html"><img src="${value.video.thumbnails[3].url}" alt="">
                 </a>
                 <div class="vid-info">
-                    <a href="../video/video.html">${value.video.title}</a>
+                    <a href="/mQYoutube/video/video.html">${value.video.title}</a>
                     <p>CreativeCode</p>
                     <p>${value.video.stats.views} Views &bull; ${value.video.publishedTimeText}</p>
                 </div>
@@ -32,7 +32,7 @@ export const rightSidebar = async(options) => {
     })
 }
 
-export const fnIframe = async(id) => {
+export const fnIframe = (id) => {
     /* Redireccionamiento video e informacion */
     let iframe = document.querySelector("#playVideo");
     iframe.insertAdjacentHTML("afterbegin", /* html */`
@@ -41,8 +41,8 @@ export const fnIframe = async(id) => {
 }
 
 export const fnContIframe = async(id,options) => {
-    const videoPeticion = await fetch(`https://youtube138.p.rapidapi.com/video/details/?id=${id}=en&gl=US`, options);
-    //const videoPeticion = await fetch("/json/videoDetails.json");
+    //const videoPeticion = await fetch(`https://youtube138.p.rapidapi.com/video/details/?id=${id}=en&gl=US`, options);
+    const videoPeticion = await fetch("/mQYoutube/json/videoDetails.json");
     const jsonVideo = await videoPeticion.json();
     console.log(videoPeticion);
     let contenidoIframe = document.querySelector("#contVideo");

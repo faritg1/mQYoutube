@@ -1,6 +1,6 @@
 export const searchAll = async(data,options) =>{
     const peticion = await fetch(`https://youtube138.p.rapidapi.com/channel/search/?id=UC8fkwsjcI_MhralEX1g4OBw&q=${data}&hl=en&gl=US`, options);
-    //const peticion = await fetch("/json/channelSearch.json");
+    //const peticion = await fetch("/mQYoutube/json/channelSearch.json");
     const json = await peticion.json();
     let h=0, cont=0
     let array = json.contents.map((value, id)=>{
