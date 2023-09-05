@@ -16,7 +16,7 @@ menuIcon.onclick = () => {
 const options = {
 	method: 'GET',
 	headers: {
-		'X-RapidAPI-Key': 'c9192f0ac7mshaf138cd6b2d4880p1ad012jsn0f663843fe85',
+		'X-RapidAPI-Key': '4eb061e88amsh29b8e54c662b1ecp113235jsn4118e7fbe114',// Si se acaba el api, poner la nueva key aca
 		'X-RapidAPI-Host': 'youtube138.p.rapidapi.com'
 	}
 };

@@ -7,7 +7,7 @@ export const searchAll = async(data,options) =>{
         if(value.playlist) return undefined;
         cont ++;
         if(cont<=10) h = 30 * cont;
-        return /* html */`<li class="search" idSearch=${value.video.videoId}  style="color: black;"><a href="../video/video.html" style="color: black;">${value.video.title}</a></li>`
+        return /* html */`<li class="search" idSearch=${value.video.videoId}  style="color: black;"><a href="/mQYoutube/video/video.html" style="color: black;">${value.video.title}</a></li>`
     })
     document.querySelector("#active").style.height = `${h}px`;
     document.querySelector("#searchAll").innerHTML = null;
